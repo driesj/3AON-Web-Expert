@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="oefening, web, expert, angular, node">
+    <meta name="description" content="Oefeningen Web Expert 2016">
+    <meta name="author" content="Rudy Mas">
+    <meta name="contact" content="rudy.mas@rudymas.be">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="7 days">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hoofdstuk 2 Oefening: Foto Tonen</title>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/foto_tonen.css" rel="stylesheet">
+    <script src="../node_modules/angular/angular.js" type="text/javascript" defer="defer"></script>
+</head>
+<body ng-app>
+<div class="container" ng-init="people=[{'name':'Elise', 'photo':'portret_elise.jpg'},
+                                        {'name':'Maria', 'photo':'portret_maria.jpg'},
+                                        {'name':'Peter', 'photo':'portret_peter.jpg'}]">
+    <p class="col-xs-2 col-xs-offset-5"><input type="checkbox" ng-model="reversed"> Omgekeerd sorteren</p>
+    <table class="col-xs-6 col-xs-offset-3">
+        <thead>
+        <tr>
+            <td class="bold">Foto</td>
+            <td class="bold">Naam</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="person in people | orderBy: 'name' : reversed">
+            <td class="center width"><img src="img/{{ person.photo }}" alt="portret"></td>
+            <td class="center">{{ person.name }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

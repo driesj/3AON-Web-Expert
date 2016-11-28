@@ -1,0 +1,11 @@
+{
+  "name": "WebExpert",
+  "version": "1.0.0",
+  "description": "Web Expert Angular + Bootstrap",
+  "author": "Rudy Mas",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5",
+    "bootstrap": "^3.0"
+  }
+}
