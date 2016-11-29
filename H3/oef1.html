@@ -11,30 +11,30 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk 2 Oefening: Foto Tonen</title>
+    <title>Hoofdstuk x Oefening</title>
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
     <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <script src="../node_modules/angular/angular.js" type="text/javascript" defer="defer"></script>
-    <link href="css/foto_tonen.css" rel="stylesheet">
+    <script src="artikelApp.js" type="text/javascript" defer="defer"></script>
 </head>
-<body ng-app>
-<div class="container"
-     ng-init="people=[{name:'Elise', photo:'portret_elise.jpg'},
-                      {name:'Maria', photo:'portret_maria.jpg'},
-                      {name:'Peter', photo:'portret_peter.jpg'}]">
-    <p class="col-xs-2 col-xs-offset-5"><input type="checkbox" ng-model="reversed"> Omgekeerd sorteren</p>
-    <table class="col-xs-6 col-xs-offset-3">
+<body ng-app="artikelApp">
+<div class="container" ng-controller="artikelController">
+    <table>
         <thead>
         <tr>
-            <td class="bold">Foto</td>
-            <td class="bold">Naam</td>
+            <th>Artikelnummer</th>
+            <th>Omschrijving</th>
+            <th>Verkoopprijs</th>
+            <th>Artikelnummer</th>
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="person in people | orderBy: 'name' : reversed">
-            <td class="center width"><img src="img/{{ person.photo }}" alt="portret"></td>
-            <td class="center">{{ person.name }}</td>
+        <tr ng-repeat="artikel in artikelen" ng-click="clickMe(artikel)">
+            <td>{{ artikel.artId }}</td>
+            <td>{{ artikel.omschrijf }}</td>
+            <td>{{ artikel.verkoopPrijs }}</td>
+            <td>{{ artikel.aankoopPrijs }}</td>
         </tr>
         </tbody>
     </table>

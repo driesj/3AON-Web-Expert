@@ -1,0 +1,29 @@
+table, tr, td {
+    border: 1px solid black;
+    margin: 15px auto;
+}
+
+td {
+    padding: 2px 5px;
+}
+
+.center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+td.width {
+    width: 330px;
+}
+
+img {
+    margin: 10px 0;
+    width: 300px;
+}
+
+p {
+    margin: 0;
+}

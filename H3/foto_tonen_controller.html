@@ -11,18 +11,16 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk 2 Oefening: Foto Tonen</title>
+    <title>Hoofdstuk 3 Oefening: Foto Tonen (Controller)</title>
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
     <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <script src="../node_modules/angular/angular.js" type="text/javascript" defer="defer"></script>
+    <script src="fotoApp.js" type="text/javascript" defer="defer"></script>
     <link href="css/foto_tonen.css" rel="stylesheet">
 </head>
-<body ng-app>
-<div class="container"
-     ng-init="people=[{name:'Elise', photo:'portret_elise.jpg'},
-                      {name:'Maria', photo:'portret_maria.jpg'},
-                      {name:'Peter', photo:'portret_peter.jpg'}]">
+<body ng-app="fotoApp">
+<div class="container" ng-controller="fotoController">
     <p class="col-xs-2 col-xs-offset-5"><input type="checkbox" ng-model="reversed"> Omgekeerd sorteren</p>
     <table class="col-xs-6 col-xs-offset-3">
         <thead>
