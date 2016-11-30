@@ -11,30 +11,26 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk x Oefening</title>
+    <title>Hoofdstuk 3 Oefening 1</title>
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <script src="../node_modules/angular/angular.js" type="text/javascript" defer="defer"></script>
-    <script src="artikelApp.js" type="text/javascript" defer="defer"></script>
+    <script src="js/artikelApp.js" type="text/javascript" defer="defer"></script>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
 <body ng-app="artikelApp">
-<div class="container" ng-controller="artikelController">
+<div class="container" ng-controller="ArtikelController">
     <table>
         <thead>
         <tr>
             <th>Artikelnummer</th>
             <th>Omschrijving</th>
-            <th>Verkoopprijs</th>
-            <th>Artikelnummer</th>
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="artikel in artikelen" ng-click="clickMe(artikel)">
-            <td>{{ artikel.artId }}</td>
-            <td>{{ artikel.omschrijf }}</td>
-            <td>{{ artikel.verkoopPrijs }}</td>
-            <td>{{ artikel.aankoopPrijs }}</td>
+            <td ng-bind="artikel.artId"></td>
+            <td ng-bind="artikel.omschrijf"></td>
         </tr>
         </tbody>
     </table>

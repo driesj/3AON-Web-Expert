@@ -11,15 +11,30 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk x Oefening</title>
+    <title>Hoofdstuk 3 Oefening 3</title>
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/angular/angular.js" type="text/javascript" defer="defer"></script>
+    <script src="js/artikel3App.js" type="text/javascript" defer="defer"></script>
+    <script src="js/artikel3Controller.js" type="text/javascript" defer="defer"></script>
     <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
-<body ng-app="myApp">
-<div class="container">
-
+<body ng-app="artikel3App">
+<div class="container" ng-controller="Artikel3Controller as ctrl">
+    <table>
+        <thead>
+        <tr>
+            <th>Artikelnummer</th>
+            <th>Omschrijving</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="artikel in ctrl.artikelen" ng-click="ctrl.clickMe(artikel)">
+            <td ng-bind="artikel.artId"></td>
+            <td ng-bind="artikel.omschrijf"></td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>

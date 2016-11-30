@@ -11,15 +11,26 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk x Oefening</title>
+    <title>Hoofdstuk 3 Oefening 4</title>
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/angular/angular.js" type="text/javascript" defer="defer"></script>
+    <script src="js/oef4App.js" type="text/javascript" defer="defer"></script>
+    <script src="js/oef4Controller.js" type="text/javascript" defer="defer"></script>
     <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
-<body ng-app="myApp">
-<div class="container">
-
+<body ng-app="oef4App">
+<div class="container" ng-controller="Oef4Controller as ctrl">
+    <h1>Lijst met namen</h1>
+    <p><input class="input-lg" type="text" ng-model="ctrl.iFirstname"></p>
+    <p><input class="input-lg" type="text" ng-model="ctrl.iLastname"></p>
+    <p>
+        <button class="btn btn-lg btn-primary" ng-click="ctrl.addPerson()">Persoon Toevoegen</button>
+    </p>
+    <hr>
+    <ul>
+        <li ng-repeat="person in ctrl.persons">{{ person.firstname}} {{ person.lastname }}</li>
+    </ul>
 </div>
 </body>
 </html>

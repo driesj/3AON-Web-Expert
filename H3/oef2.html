@@ -11,15 +11,28 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk x Oefening</title>
+    <title>Hoofdstuk 3 Oefening 2</title>
     <script src="../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
     <script src="../node_modules/angular/angular.js" type="text/javascript" defer="defer"></script>
+    <script src="js/calculatorApp.js" type="text/javascript" defer="defer"></script>
     <link href="../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
 </head>
-<body ng-app="myApp">
-<div class="container">
-
+<body ng-app="calculatorApp">
+<div class="container" ng-controller="CalcController">
+    <h1>Angular Calculator</h1>
+    <p><input class="input-lg" type="number" ng-model="number1" required></p>
+    <p><input class="input-lg" type="number" ng-model="number2" required></p>
+    <p>
+        <button class="btn btn-lg btn-primary" ng-click="calcAdd()">Optellen</button>
+        <button class="btn btn-lg btn-primary" ng-click="calcSub()">Aftrekken</button>
+    </p>
+    <p>
+        <button class="btn btn-lg btn-primary" ng-click="calcMult()">Vermenigvuldigen</button>
+        <button class="btn btn-lg btn-primary" ng-click="calcDev()">Delen</button>
+    </p>
+    <hr>
+    <h3 ng-bind="result"></h3>
 </div>
 </body>
 </html>

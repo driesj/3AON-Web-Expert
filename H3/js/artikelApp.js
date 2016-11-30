@@ -1,5 +1,5 @@
 var app = angular.module('artikelApp', []);
-app.controller('artikelController', function ($scope){
+app.controller('ArtikelController', function ($scope) {
     $scope.artikelen = [
         {artId: '000001', omschrijf: 'Tandenborstel', verkoopPrijs: 3.25, aankoopPrijs: 1.50},
         {artId: '000002', omschrijf: 'Handdoek', verkoopPrijs: 3.25, aankoopPrijs: 2.50},
@@ -7,7 +7,7 @@ app.controller('artikelController', function ($scope){
         {artId: '000004', omschrijf: 'Keukenrol', verkoopPrijs: 1.20, aankoopPrijs: 0.65},
         {artId: '000005', omschrijf: 'Tandpasta', verkoopPrijs: 0.65, aankoopPrijs: 0.15}
     ];
-    $scope.clickMe = function(artikel) {
-            alert('Something');
+    $scope.clickMe = function (artikel) {
+        alert(artikel.omschrijf + ' - ' + artikel.verkoopPrijs + ' - ' + artikel.aankoopPrijs);
     };
 });
