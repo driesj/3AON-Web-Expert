@@ -1,0 +1,10 @@
+<div>
+    <h1>Home Page</h1>
+    <ul>
+        <li ng-repeat="item in homeCtrl.items">
+            <a ng-href="#/item/{{item.id}}">
+                {{item.info}}
+            </a>
+        </li>
+    </ul>
+</div>
