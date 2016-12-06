@@ -1,0 +1,18 @@
+<div>
+    <table width="80%">
+        <thead>
+        <tr>
+            <th>Omschrijving</th>
+            <th>Prijs</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="auto in homeCtrl.autos">
+            <td><a ng-href="auto/{{auto.id}}">{{auto.omschrijf}}</a></td>
+            <td>{{auto.prijs | currency:"€":0}}</td>
+            <td>{{auto.type}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

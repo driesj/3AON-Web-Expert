@@ -1,0 +1,97 @@
+@charset "utf-8";
+/* CSS Document */
+
+#container {
+	width: 950px;
+	margin: 50px auto;
+	border: 1px solid #F90;
+	padding: 10px;
+}
+#leftmiddle {
+	width: 850px;
+	color: #FFF;
+	margin: 20px auto;
+}
+#header {
+	background-image: url(../images/header.jpg);
+	height: 150px;
+	width: 830px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	margin: 0px auto;
+}
+.rechts {
+	text-align: right;
+}
+.links {
+	text-align: left;
+}
+
+table {
+	border: 2px solid #36C;
+	margin: 0 auto;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background-image: url(../images/m_background.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.center {
+	text-align: center;
+}
+#footer {
+	background-image: url(../images/footer.jpg);
+	height: 150px;
+	width: 850px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	clear: left;
+	margin: 0 auto;
+}
+a {
+	color: #FF0;
+}
+a:hover {
+	color: #FFF;
+}
+.kleur1 {
+	background-color: #666;
+}
+.kleur2 {
+	background-color: #CCC;
+}
+
+#auto {
+	border-collapse: separate;
+	border-spacing: 3px;
+	width: 90%;
+}
+#auto td.name {
+	padding: 2px 5px;
+	width: 50%;
+}
+#auto td.output {
+	padding: 2px 5px;
+	width: 40%;
+}
+#auto td.output > span {
+	display: inline-block;
+	border: 1px solid black;
+	width: 120px;
+	background-color: white;
+	color: black;
+	padding: 1px 5px;
+}
+
+#partners {
+	width: 90%;
+	border: 2px solid #36C;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#partners img {
+	width: 80%;
+	margin: 10px 0;
+}
