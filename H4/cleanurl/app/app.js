@@ -6,7 +6,7 @@
     moduleConfig.$inject = ['$routeProvider', '$locationProvider'];
 
     function moduleConfig($routeProvider, $locationProvider) {
-        $routeProvider.when('/', {
+        $routeProvider.when('/home', {
             templateUrl: 'views/home.html',
             controller: 'homeController',
             controllerAs: 'homeCtrl'
@@ -20,7 +20,7 @@
                 templateUrl: 'views/partners.html'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/home'
             });
 
         $locationProvider.html5Mode(true);
