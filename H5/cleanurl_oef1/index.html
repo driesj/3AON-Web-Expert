@@ -11,17 +11,20 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk 4 Oefening AutoWebApp (CleanURL)</title>
-    <base href="/webexpert/H4/cleanurl/">
+    <title>Hoofdstuk 5 Oefening 1</title>
+    <base href="/webexpert/H5/cleanurl_oef1/">
     <!-- Vendor Scripts -->
     <script src="../../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
     <script src="../../node_modules/angular/angular.min.js" type="text/javascript" defer="defer"></script>
     <script src="../../node_modules/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
     <!-- Personal Scripts -->
-    <script src="app/app.js" type="text/javascript" defer="defer"></script>
+    <script src="app/app.js" type="text/javascript" defer></script>
     <script src="controllers/homeController.js" type="text/javascript" defer></script>
     <script src="controllers/autoController.js" type="text/javascript" defer></script>
+    <script src="controllers/deleteAutoController.js" type="text/javascript" defer></script>
+    <script src="controllers/addAutoController.js" type="text/javascript" defer></script>
+    <script src="services/autoFactory.js" type="text/javascript" defer></script>
     <!-- CSS files -->
     <link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/autoweb.css" rel="stylesheet">
@@ -37,6 +40,7 @@
         <table width="50%">
             <tr>
                 <th class="center"><a ng-href="home">Home</a></th>
+                <th class="center"><a ng-href="addAuto">Add Car</a></th>
                 <th class="center"><a ng-href="partners">Mercedes Partners</a></th>
             </tr>
         </table>
