@@ -9,7 +9,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="auto in homeCtrl.autos | orderBy:'id'">
+        <tr ng-repeat="auto in homeCtrl.autos">
             <td><a ng-href="deleteAuto/{{$index}}"><span class="glyphicon glyphicon-trash" style="color: black; background-color: white; margin: 3px; padding: 5px; border-radius: 10px"></span></a></td>
             <td><a ng-href="auto/{{$index}}">{{auto.omschrijf}}</a></td>
             <td>{{auto.prijs | currency:"€":0}}</td>
