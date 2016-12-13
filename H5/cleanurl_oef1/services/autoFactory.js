@@ -22,11 +22,11 @@
         };
 
         factory.getAuto = function (id) {
-            return autos[id - 1];
+            return autos[id];
         };
 
         factory.deleteAuto = function (id) {
-            autos.splice(id - 1, 1);
+            autos.splice(id, 1);
             return autos;
         };
 

@@ -5,8 +5,8 @@
   "author": "Rudy Mas",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.5",
-    "angular-route": "^1.5.9",
+    "angular": "^1.6.0",
+    "angular-route": "^1.6.0",
     "bootstrap": "^3.0",
     "jquery": "^2.0"
   }
