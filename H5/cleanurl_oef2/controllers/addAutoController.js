@@ -3,6 +3,7 @@
     angular.module('autoApp')
         .controller('addAutoController', addAutoController);
 
+    addAutoController.$inject = ['autoFactory', '$location', 'GLOBALS'];
 
     function addAutoController(autoFactory, $location, GLOBALS) {
         var vm = this;
