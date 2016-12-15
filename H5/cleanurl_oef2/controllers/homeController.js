@@ -3,12 +3,10 @@
     angular.module('autoApp')
         .controller('homeController', homeController);
 
-    homeController.$inject = ['autoFactory', 'GLOBALS'];
+    homeController.$inject = ['autoFactory'];
 
-    function homeController(autoFactory, GLOBALS    ) {
+    function homeController(autoFactory) {
         var vm = this;
         vm.autos = autoFactory.getAutos();
-        vm.copyright = GLOBALS.copyright;
-        vm.appVersion = GLOBALS.appVersion;
     }
-}) ();
+})();

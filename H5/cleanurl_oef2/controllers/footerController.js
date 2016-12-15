@@ -7,8 +7,6 @@
 
     function footerController(GLOBALS) {
         var vm = this;
-        vm.addFooter = function () {
-            $('footer').html('<p style="text-align: center; padding: 0; margin: 0"><span>' + GLOBALS.copyright + '</span> - <span>Appversie: ' + GLOBALS.appVersion + '</span></p>');
-        };
+        vm.footer = GLOBALS.copyright + ' - Appversie: ' + GLOBALS.appVersion;
     }
 })();
