@@ -11,22 +11,25 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk x Oefening</title>
+    <title>Hoofdstuk 5 Oefening 4</title>
+    <base href="/webexpert/H5/oef4/">
     <!-- Vendor Scripts -->
     <script src="../../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
     <script src="../../node_modules/angular/angular.min.js" type="text/javascript" defer="defer"></script>
     <script src="../../node_modules/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
-    <script src="../../node_modules/ng-slide-down/dist/ng-slide-down.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/ng-slide-down/dist/ng-slide-down.min.js" type="text/javascript"
+            defer="defer"></script>
     <!-- Personal Scripts -->
-    <script src="app/app.js" type="text/javascript" defer="defer"></script>
-    <script src="controllers/homeController.js" type="text/javascript" defer="defer"></script>
-    <script src="controllers/itemController.js" type="text/javascript" defer="defer"></script>
+    <script src="app/app.js" type="text/javascript" defer></script>
+    <script src="controllers/homeController.js" type="text/javascript" defer></script>
+    <script src="services/vehicleFactory.js" type="text/javascript" defer></script>
     <!-- CSS files -->
     <link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 </head>
-<body ng-app="myApp">
-<div class="container">
+<body ng-app="vehicleApp" ng-cloak>
+<div id="container">
     <div ng-view></div>
 </div>
 </body>

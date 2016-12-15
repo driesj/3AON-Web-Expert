@@ -1,0 +1,15 @@
+<div>
+    <div ng-repeat="vehicle in Ctrl.vehicles">
+        <div ng-click="slider = !slider" class="head">{{vehicle.name}}</div>
+        <div ng-slide-down="slider" lazy-render duration="1">
+            <div class="content">
+                <ul>
+                    <li ng-repeat="(attribute, value) in vehicle.parts">
+                        {{attribute}} ({{value}})
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+</div>
