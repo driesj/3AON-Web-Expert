@@ -1,14 +1,14 @@
 {
   "name": "WebExpert",
   "version": "1.0.0",
-  "description": "Web Expert Angular + Bootstrap",
+  "description": "Web Expert Package",
   "author": "Rudy Mas",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.0",
     "angular-route": "^1.6.0",
-    "ng-slide-down": "^0.4.2",
     "bootstrap": "^3.0",
-    "jquery": "^2.0"
+    "jquery": "^2.0",
+    "ng-slide-down": "^0.4.2"
   }
 }
