@@ -3,13 +3,11 @@
     angular.module('autoApp')
         .controller('autoController', autoController);
 
-    autoController.$inject = ['$routeParams', 'autoFactory', 'GLOBALS'];
+    autoController.$inject = ['$routeParams', 'autoService'];
 
-    function autoController($routeParams, autoFactory, GLOBALS) {
+    function autoController($routeParams, autoService) {
         var vm = this;
         var id = $routeParams.id;
-        vm.autos = autoFactory.getAuto(id);
-        vm.copyright = GLOBALS.copyright;
-        vm.appVersion = GLOBALS.appVersion;
+        vm.autos = autoService.getAuto(id);
     }
 }) ();

@@ -1,11 +1,9 @@
 (function() {
     'use strict';
     angular.module('autoApp')
-        .factory('autoFactory', autoFactory);
+        .service('autoService', autoService);
 
-    function autoFactory() {
-        var factory = {};
-
+    function autoService() {
         var autos = [
             {id: 1, omschrijf: 'A 180', prijs: 24242, type: 'A', verkeerTax: 250, inverkeer: 500, verbruik: 5.20},
             {id: 2, omschrijf: 'A 180 CDI BlueEFFICIENCY', prijs: 26015, type: 'A', verkeerTax: 251, inverkeer: 500, verbruik: 5.20},
@@ -17,20 +15,20 @@
             {id: 8, omschrijf: 'CL 600', prijs: 170489, type: 'CL', verkeerTax: 257, inverkeer: 500, verbruik: 5.20}
         ];
 
-        factory.getAutos = function () {
+        this.getAutos = function () {
             return autos;
         };
 
-        factory.getAuto = function (id) {
+        this.getAuto = function (id) {
             return autos[id];
         };
 
-        factory.deleteAuto = function (id) {
+        this.deleteAuto = function (id) {
             autos.splice(id, 1);
             return autos;
         };
 
-        factory.addAuto = function (newAuto) {
+        this.addAuto = function (newAuto) {
             var id = 0;
             for (var i = 0; i < autos.length; i++) {
                 if (autos[i].id >= id) {
@@ -40,7 +38,5 @@
             newAuto.id = id;
             autos.push(newAuto);
         };
-
-        return factory;
     }
 }) ();

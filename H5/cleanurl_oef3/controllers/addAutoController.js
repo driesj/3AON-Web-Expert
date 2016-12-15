@@ -3,9 +3,9 @@
     angular.module('autoApp')
         .controller('addAutoController', addAutoController);
 
-    addAutoController.$inject = ['autoFactory', '$location', 'GLOBALS'];
+    addAutoController.$inject = ['autoService', '$location'];
 
-    function addAutoController(autoFactory, $location, GLOBALS) {
+    function addAutoController(autoService, $location) {
         var vm = this;
         vm.addAuto = function () {
             var newAuto = {
@@ -17,11 +17,9 @@
                 verbruik: vm.auto.verbruik
             };
 
-            autoFactory.addAuto(newAuto);
+            autoService.addAuto(newAuto);
 
             $location.path('home');
         };
-        vm.copyright = GLOBALS.copyright;
-        vm.appVersion = GLOBALS.appVersion;
     }
 })();
