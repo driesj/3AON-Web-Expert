@@ -44,5 +44,9 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
     * /cleanurl_oef2_JQuery (My Solution Exercise 2)
     * /cleanurl_oef3 (Solution Exercise 3)
     * /oef4 (Solution Exercise 4)
+* /H6: Solution Chapter 6 (Work in progress)
+    * /API (PHP API for the db_auto Database)
+        * You need composer to install all the vendor classes!!!
+    * /AutoApp (AngularJS Auto App using $http)
 * /Template (Contains a few starting points for a new App)
 * package.json (Used by npm to install all dependencies)

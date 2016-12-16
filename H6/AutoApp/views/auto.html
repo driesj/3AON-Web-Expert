@@ -1,0 +1,26 @@
+<div>
+    <table id="auto">
+        <tbody>
+        <tr>
+            <td rowspan="5"><img src="images/{{Ctrl.autos.type}}.png"></td>
+            <td colspan="2">{{Ctrl.autos.omschrijf}}</td>
+        </tr>
+        <tr>
+            <td class="label-default name">Basisprijs</td>
+            <td class="label-default output"><span>{{Ctrl.autos.basisprijs | currency:'€':0}}</span></td>
+        </tr>
+        <tr>
+            <td class="label-default name">Verkeersbelasting (jaarlijks)</td>
+            <td class="label-default output"><span>{{Ctrl.autos.verkbelast | currency:'€':0}}</span></td>
+        </tr>
+        <tr>
+            <td class="label-default name">Belasting op inverkeerstelling</td>
+            <td class="label-default output"><span>{{Ctrl.autos.inverkbelast | currency:'€':0}}</span></td>
+        </tr>
+        <tr>
+            <td class="label-default name">Gemiddeld verbruik (L/100KM)</td>
+            <td class="label-default output"><span>{{Ctrl.autos.verbruik}}</span></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
