@@ -9,7 +9,7 @@
         var vm = this;
         autoFactory.getAutos()
             .then(function (response) {
-                vm.autos = response.data.autos;
+                vm.autos = response.data.data.autos
             });
     }
 })();

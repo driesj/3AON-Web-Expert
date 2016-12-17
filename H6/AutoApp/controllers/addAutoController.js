@@ -7,19 +7,28 @@
 
     function addAutoController(autoFactory, $location) {
         var vm = this;
+        autoFactory.getTypeAutos()
+            .then(function (response) {
+                vm.typeAutos = response.data.data.typeAutos
+            });
+
         vm.addAuto = function () {
-            var newAuto = {
+            var newAuto = { data: {
                 omschrijf: vm.auto.omschrijf,
                 prijs: vm.auto.prijs,
                 type: vm.auto.type,
                 verkeerTax: vm.auto.verkeerTax,
                 inverkeer: vm.auto.inverkeer,
                 verbruik: vm.auto.verbruik
-            };
+            }};
 
-            autoFactory.addAuto(newAuto);
-
-            $location.path('home');
+            autoFactory.addAuto(newAuto)
+                .then(function () {
+                    $location.path('home')
+                }, function (response) {
+                    alert('Er ging iets mis!\nBrowser code: ' + response.status)
+                    $location.path('home')
+                });
         };
     }
 })();

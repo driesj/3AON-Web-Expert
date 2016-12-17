@@ -8,7 +8,13 @@
     function deleteAutoController($routeParams, autoFactory, $location) {
         var vm = this;
         var id = $routeParams.id;
-        vm.autos = autoFactory.deleteAuto(id);
-        $location.path('home');
+        autoFactory.deleteAuto(id)
+            .then(function () {
+                $location.path('home')
+            }, function (response) {
+                alert('Er ging iets mis!\nBrowser code: ' + response.status)
+                $location.path('home')
+            });
+
     }
-}) ();
+})();

@@ -10,7 +10,7 @@
         var id = $routeParams.id;
         autoFactory.getAuto(id)
             .then(function (response) {
-                vm.autos = response.data;
+                vm.autos = response.data.data;
             });
     }
 }) ();

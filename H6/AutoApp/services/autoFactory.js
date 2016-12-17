@@ -23,20 +23,29 @@
         };
 
         factory.deleteAuto = function (id) {
-            autos.splice(id, 1);
-            return autos;
+            return $http({
+                method: 'POST',
+                url: 'http://localhost/webexpert/H6/API/deleteAuto/'+id
+            })
         };
 
         factory.addAuto = function (newAuto) {
-            var id = 0;
-            for (var i = 0; i < autos.length; i++) {
-                if (autos[i].id >= id) {
-                    id = autos[i].id + 1;
+            return $http({
+                method: 'POST',
+                url: 'http://localhost/webexpert/H6/API/newAuto',
+                data: newAuto,
+                headers: {
+                    'Content-Type': 'application/json'
                 }
-            }
-            newAuto.id = id;
-            autos.push(newAuto);
+            })
         };
+
+        factory.getTypeAutos = function () {
+            return $http({
+                method: 'GET',
+                url: 'http://localhost/webexpert/H6/API/typeAutos'
+            })
+        }
 
         return factory;
     }

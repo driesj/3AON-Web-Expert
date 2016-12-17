@@ -7,7 +7,11 @@
         </tr>
         <tr>
             <td class="label-default name">Type</td>
-            <td class="label-default output" style="color: black"><input type="text" ng-model="Ctrl.auto.type"/></td>
+            <td class="label-default output" style="color: black">
+                <select ng-model="Ctrl.auto.type">
+                    <option ng-repeat="type in Ctrl.typeAutos" value="{{type.id}}">{{type.type}}</option>
+                </select>
+            </td>
         </tr>
         <tr>
             <td class="label-default name">Basisprijs</td>
