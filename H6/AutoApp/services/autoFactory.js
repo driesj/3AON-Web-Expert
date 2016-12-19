@@ -45,7 +45,7 @@
                 method: 'GET',
                 url: 'http://localhost/webexpert/H6/API/typeAutos'
             })
-        }
+        };
 
         return factory;
     }
