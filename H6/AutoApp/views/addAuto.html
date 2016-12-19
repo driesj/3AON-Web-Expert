@@ -8,8 +8,7 @@
         <tr>
             <td class="label-default name">Type</td>
             <td class="label-default output" style="color: black">
-                <select ng-model="Ctrl.auto.type">
-                    <option ng-repeat="type in Ctrl.typeAutos" value="{{type.id}}">{{type.type}}</option>
+                <select ng-options="type.type for type in Ctrl.typeAutos track by type.id" ng-model="Ctrl.auto.type">
                 </select>
             </td>
         </tr>

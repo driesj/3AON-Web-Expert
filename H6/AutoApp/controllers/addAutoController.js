@@ -16,7 +16,7 @@
             var newAuto = { data: {
                 omschrijf: vm.auto.omschrijf,
                 prijs: vm.auto.prijs,
-                type: vm.auto.type,
+                type: vm.auto.type.id,
                 verkeerTax: vm.auto.verkeerTax,
                 inverkeer: vm.auto.inverkeer,
                 verbruik: vm.auto.verbruik
