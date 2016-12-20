@@ -50,5 +50,6 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
     * /AutoApp (AngularJS Auto App using $http)
 * /H7: Solution Chapter 7
     * /oef1
+    * /oef2 (Uses /H6/API as data source)
 * /Template (Contains a few starting points for a new App)
 * package.json (Used by npm to install all dependencies)
