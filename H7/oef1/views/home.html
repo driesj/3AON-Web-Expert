@@ -1,15 +1,20 @@
 <div>
-    <div ng-repeat="vehicle in Ctrl.vehicles">
-        <div ng-click="slider = !slider" class="head">{{vehicle.name}}</div>
-        <div ng-slide-down="slider" lazy-render duration="1">
-            <div class="content">
-                <ul>
-                    <li ng-repeat="(attribute, value) in vehicle.parts">
-                        {{attribute}} ({{value}})
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer"></div>
+    <div>
+        <label>
+            <select ng-options="p.lname + ' ' + p.fname for p in Ctrl.persons track by p.id"
+                    ng-model="Ctrl.personChoice"
+                    ng-change="Ctrl.changePerson()"></select>
+        </label>
+    </div>
+    <div ng-hide="Ctrl.hide">
+        <p>
+            <b>Lastname:</b> {{Ctrl.person.lname}}<br>
+            <b>Firstname:</b> {{Ctrl.person.fname}}<br>
+            <b>E-mail:</b> {{Ctrl.person.email}}<br>
+            <b>Phone:</b> {{Ctrl.person.phone}}<br>
+            <b>Address:</b><br>
+            {{Ctrl.person.address}}<br>
+            {{Ctrl.person.city}} {{Ctrl.person.state}} {{Ctrl.person.zip}}
+        </p>
     </div>
 </div>

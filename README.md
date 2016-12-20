@@ -48,5 +48,7 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
     * /API (PHP API for the db_auto Database)
         * You need composer to install all the vendor classes!!!
     * /AutoApp (AngularJS Auto App using $http)
+* /H7: Solution Chapter 7
+    * /oef1
 * /Template (Contains a few starting points for a new App)
 * package.json (Used by npm to install all dependencies)
