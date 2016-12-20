@@ -26,7 +26,7 @@
                 .then(function () {
                     $location.path('home')
                 }, function (response) {
-                    alert('Er ging iets mis!\nBrowser code: ' + response.status)
+                    alert('Er ging iets mis!\nBrowser code: ' + response.status);
                     $location.path('home')
                 });
         };

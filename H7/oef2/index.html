@@ -11,7 +11,7 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hoofdstuk 6 Oefening 1</title>
+    <title>Hoofdstuk 7 Oefening 2</title>
     <base href="/webexpert/H7/oef2/">
     <!-- Vendor Scripts -->
     <script src="../../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
@@ -49,9 +49,7 @@
     </div>
     <footer style="border: 1px solid black; background-color: white; color: black; margin: 20px 0 0; padding: 2px"
             ng-controller="footerController as footCtrl">
-        <p style="text-align: center; padding: 0; margin: 0">
-            {{footCtrl.footer}}
-        </p>
+        <p style="text-align: center; padding: 0; margin: 0" ng-bind-html="footCtrl.footer"></p>
     </footer>
 </div>
 </body>
