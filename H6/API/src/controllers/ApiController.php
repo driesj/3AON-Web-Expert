@@ -67,11 +67,29 @@ class ApiController extends Controller
         $this->render(null, [], 'JSON', $httpCode);
     }
 
+    /**
+     * Retrieve the type of cars
+     */
     public function getTypeAutosAction()
     {
         $db = new DatabaseController($this->args['dbconnect']);
         $data['typeAutos'] = $db->getTypeAutos();
         $this->render(null, $data, 'JSON');
     }
+
+    public function getPrijsklasseAction()
+    {
+        $db = new DatabaseController($this->args['dbconnect']);
+        $data['prijsklasse'] = $db->getPrijsklasse();
+        for ($x = 0; $x < count($data['prijsklasse']); $x++) {
+            if ($data['prijsklasse'][$x]['max_prijs'] != 9999999) {
+                $data['prijsklasse'][$x]['tekst'] = '&gt; &euro;' . $data['prijsklasse'][$x]['min_prijs'] . ' ... &lt; &euro;' . $data['prijsklasse'][$x]['max_prijs'];
+            } else {
+                $data['prijsklasse'][$x]['tekst'] = '&gt; &euro;' . $data['prijsklasse'][$x]['min_prijs'];
+            }
+        }
+        $this->render(null, $data, 'JSON');
+    }
 }
+
 /** End of File: ApiController.php **/

@@ -100,5 +100,18 @@ class DatabaseController
         $this->dbconnect->fetchAll();
         return $this->dbconnect->data;
     }
+
+    /**
+     * @return array
+     */
+    public function getPrijsklasse()
+    {
+        $query = "SELECT *
+                  FROM tbl_price
+                  ORDER BY min_prijs";
+        $this->dbconnect->query($query);
+        $this->dbconnect->fetchAll();
+        return $this->dbconnect->data;
+    }
 }
 /** End of File: DatabaseController.php */

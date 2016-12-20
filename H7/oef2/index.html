@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="oefening, web, expert, angular, node">
+    <meta name="description" content="Oefeningen Web Expert 2016">
+    <meta name="author" content="Rudy Mas">
+    <meta name="contact" content="rudy.mas@rudymas.be">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="7 days">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hoofdstuk 6 Oefening 1</title>
+    <base href="/webexpert/H7/oef2/">
+    <!-- Vendor Scripts -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/angular/angular.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/angular-sanitize/angular-sanitize.min.js" type="text/javascript" defer="defer"></script>
+    <!-- Personal Scripts -->
+    <script src="app/app.js" type="text/javascript" defer></script>
+    <script src="controllers/homeController.js" type="text/javascript" defer></script>
+    <script src="controllers/autoController.js" type="text/javascript" defer></script>
+    <script src="controllers/deleteAutoController.js" type="text/javascript" defer></script>
+    <script src="controllers/addAutoController.js" type="text/javascript" defer></script>
+    <script src="controllers/footerController.js" type="text/javascript" defer></script>
+    <script src="services/autoFactory.js" type="text/javascript" defer></script>
+    <!-- CSS files -->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/autoweb.css" rel="stylesheet">
+</head>
+<body ng-app="autoApp">
+<div id="container">
+    <div id="header"></div>
+    <div id="middle">
+        <div id="leftmiddle" ng-view>
+        </div>
+    </div>
+    <div id="footer">
+        <table width="50%">
+            <tr>
+                <th class="center"><a ng-href="home">Home</a></th>
+                <th class="center"><a ng-href="addAuto">Add Car</a></th>
+                <th class="center"><a ng-href="partners">Mercedes Partners</a></th>
+            </tr>
+        </table>
+    </div>
+    <footer style="border: 1px solid black; background-color: white; color: black; margin: 20px 0 0; padding: 2px"
+            ng-controller="footerController as footCtrl">
+        <p style="text-align: center; padding: 0; margin: 0">
+            {{footCtrl.footer}}
+        </p>
+    </footer>
+</div>
+</body>
+</html>

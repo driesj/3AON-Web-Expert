@@ -1,0 +1,50 @@
+<div>
+    <div>
+        <table width="100%" style="margin-bottom: 10px">
+            <tr>
+                <td width="33%">Type:
+                    <label style="color: black">
+                        <select ng-model="Ctrl.typeSelect">
+                            <option value="" selected>All</option>
+                            <option ng-repeat="typeAuto in Ctrl.typeAutos" value="{{typeAuto.type}}">{{typeAuto.type}}
+                            </option>
+                        </select>
+                    </label>
+                </td>
+                <td width="33%" style="text-align: center">Prijsklasse:
+                    <label style="color: black">
+                        <select ng-model="Ctrl.prijsSelect">
+                            <option value="" selected>All</option>
+                            <option ng-repeat="prklasse in Ctrl.prijsklasse" value="{{prklasse}}"
+                                    ng-bind-html="prklasse.tekst"></option>
+                        </select>
+                    </label>
+                </td>
+                <td width="33%" style="text-align: right">
+                    <input type="button" ng-click="Ctrl.setFilter()" value="Set Filter" style="color: black">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table width="80%">
+        <thead>
+        <tr>
+            <th>&nbsp;</th>
+            <th>Omschrijving</th>
+            <th>Prijs</th>
+            <th>Type</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="auto in Ctrl.autos | filter : {type: Ctrl.typeSearch}"
+            ng-if="auto.basisprijs >= Ctrl.minPrijsSearch && auto.basisprijs < Ctrl.maxPrijsSearch">
+            <td><a ng-href="deleteAuto/{{auto.id}}"><span class="glyphicon glyphicon-trash"
+                                                          style="color: black; background-color: white; margin: 3px; padding: 5px; border-radius: 10px"></span></a>
+            </td>
+            <td><a ng-href="auto/{{auto.id}}">{{auto.omschrijving}}</a></td>
+            <td>{{auto.basisprijs | currency:"€":0}}</td>
+            <td>{{auto.type}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>

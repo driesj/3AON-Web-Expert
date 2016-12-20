@@ -30,6 +30,7 @@ $router->addRoute('GET', '/auto/{id}', 'Api:getAuto', ['dbconnect' => $dbconnect
 $router->addRoute('POST', '/deleteAuto/{id}', 'Api:deleteAuto', ['dbconnect' => $dbconnect]);
 $router->addRoute('POST', '/newAuto', 'Api:newAuto', ['dbconnect' => $dbconnect]);
 $router->addRoute('GET', '/typeAutos', 'Api:getTypeAutos', ['dbconnect' => $dbconnect]);
+$router->addRoute('GET', '/prijsklasse', 'Api:getPrijsklasse', ['dbconnect' => $dbconnect]);
 
 try {
     $router->execute();

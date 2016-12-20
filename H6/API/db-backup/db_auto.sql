@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 16, 2016 at 07:36 PM
+-- Generation Time: Dec 20, 2016 at 12:33 PM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.13
 
@@ -56,6 +56,28 @@ INSERT INTO `tbl_auto` (`id`, `type_id`, `omschrijving`, `basisprijs`, `verbruik
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_price`
+--
+
+DROP TABLE IF EXISTS `tbl_price`;
+CREATE TABLE `tbl_price` (
+  `id` tinyint(4) NOT NULL,
+  `min_prijs` int(11) NOT NULL,
+  `max_prijs` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `tbl_price`
+--
+
+INSERT INTO `tbl_price` (`id`, `min_prijs`, `max_prijs`) VALUES
+(1, 20000, 30000),
+(2, 30000, 50000),
+(3, 50000, 9999999);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_type`
 --
 
@@ -86,6 +108,12 @@ ALTER TABLE `tbl_auto`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_price`
+--
+ALTER TABLE `tbl_price`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tbl_type`
 --
 ALTER TABLE `tbl_type`
@@ -100,6 +128,11 @@ ALTER TABLE `tbl_type`
 --
 ALTER TABLE `tbl_auto`
   MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `tbl_price`
+--
+ALTER TABLE `tbl_price`
+  MODIFY `id` tinyint(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_type`
 --
