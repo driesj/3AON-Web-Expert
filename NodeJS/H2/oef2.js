@@ -1,6 +1,6 @@
-var voornaam = "Peter";
-var achternaam = "Kassenaar";
-var email = "info@kassenaar.com";
+var voornaam = 'Peter';
+var achternaam = 'Kassenaar';
+var email = '"info@kassenaar.com';
 var http = require('http');
 var server = http.createServer(function (request, response) {
     response.writeHead(200, {'Content-Type':'application/json'});

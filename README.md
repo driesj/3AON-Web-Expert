@@ -51,5 +51,11 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
 * /H7: Solution Chapter 7
     * /oef1
     * /oef2 (Uses /H6/API as data source)
-* /Template (Contains a few starting points for a new App)
+* /NodeJS
+    * /H2: Solution Chapter 2
+        * oef1.js
+        * oef2.js
+        * oef3.js
+* /Template (Contains a few starting points for new Apps)
+    * /AngularJS (Templates for AngularJS 1.*)
 * package.json (Used by npm to install all dependencies)
