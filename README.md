@@ -17,7 +17,7 @@ npm update --save
 
 ##### Using XAMPP
 
-Create a folder 'webexpet' in the folder 'htdocs'.  
+Create a folder 'webexpert' in the folder 'htdocs'.  
 You can use http://localhost/webexpert to browse and open the solutions in the browser.
 
 ## Documentation
@@ -56,6 +56,9 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
         * oef1.js
         * oef2.js
         * oef3.js
+    * /H3: Solution Chapter 3
+        * /oef1-2
+        * /oef3
 * /Template (Contains a few starting points for new Apps)
     * /AngularJS (Templates for AngularJS 1.*)
 * package.json (Used by npm to install all dependencies)
