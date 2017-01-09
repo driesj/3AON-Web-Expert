@@ -1,0 +1,17 @@
+{
+  "name": "hoofdstuk4oef2",
+  "version": "1.0.0",
+  "description": "Hoofdstuk 4 Oefening 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web",
+    "expert",
+    "hoofdstuk 4",
+    "oefening 2"
+  ],
+  "author": "Rudy Mas",
+  "license": "ISC"
+}
