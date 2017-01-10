@@ -24,7 +24,7 @@ var server = http.createServer(function (request, response) {
             showPage('pag4.html');
             break;
         default:
-            serve404(root + '404.html');
+            showPage(url);
     }
 
     function showPage(page) {
