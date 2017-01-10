@@ -3,6 +3,7 @@ var path = require('path');
 var mime = require('mime');
 // var ejs = require('ejs');
 var root = __dirname + '/public/';
+var htmlErrorCode404 = __dirname + '/public/404.html';
 
 var http = require('http');
 var server = http.createServer(function (request, response) {
@@ -34,7 +35,7 @@ var server = http.createServer(function (request, response) {
             if (exists) {
                 serveFile(fileName);
             } else {
-                serve404(root + '404.html');
+                serve404();
             }
         })
     }
@@ -53,9 +54,9 @@ var server = http.createServer(function (request, response) {
         });
     }
 
-    function serve404(pageToShow) {
-        response.writeHead(404, {'Content-Type': mime.lookup(pageToShow)});
-        fs.readFile(pageToShow, 'utf8', function (err, data) {
+    function serve404() {
+        response.writeHead(404, {'Content-Type': mime.lookup(htmlErrorCode404)});
+        fs.readFile(htmlErrorCode404, 'utf8', function (err, data) {
             if (err) {
                 console.log('Error: ', err);
             } else {
