@@ -12,16 +12,16 @@ var server = http.createServer(function (request, response) {
         case '/':
             showPage('index.html');
             break;
-        case '/pag1':
+        case '/pagina1':
             showPage('pag1.html');
             break;
-        case '/pag2':
+        case '/pagina2':
             showPage('pag2.html');
             break;
-        case '/pag3':
+        case '/pagina3':
             showPage('pag3.html');
             break;
-        case '/pag4':
+        case '/pagina4':
             showPage('pag4.html');
             break;
         default:
