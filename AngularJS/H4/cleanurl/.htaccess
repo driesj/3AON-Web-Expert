@@ -5,4 +5,4 @@ RewriteEngine On
   RewriteRule ^ - [L]
 
   # If the requested resource doesn't exist, use index.html
-  RewriteRule ^ /webexpert/H4/cleanurl/index.html
+  RewriteRule ^ /webexpert/AngularJS/H4/cleanurl/index.html

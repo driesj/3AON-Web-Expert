@@ -5,7 +5,7 @@
         .constant('GLOBALS', {
             copyright: '&copy; 2015 - AutoService APP',
             appVersion: '1.0.0',
-            ApiUrl: 'http://localhost/webexpert/H6/API'
+            ApiUrl: 'http://localhost/webexpert/AngularJS/H6/API'
         });
 
     moduleConfig.$inject = ['$routeProvider', '$locationProvider'];

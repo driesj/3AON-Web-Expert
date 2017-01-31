@@ -3,9 +3,9 @@
     angular.module('autoApp', ['ngRoute'])
         .config(moduleConfig);
 
-    moduleConfig.$inject = ['$routeProvider'];
+    moduleConfig.$inject = ['$routeProvider', '$locationProvider'];
 
-    function moduleConfig($routeProvider) {
+    function moduleConfig($routeProvider, $locationProvider) {
         $routeProvider.when('/', {
             templateUrl: 'views/home.html',
             controller: 'homeController',
@@ -22,5 +22,10 @@
             .otherwise({
                 redirectTo: '/'
             });
+        /*
+         * For AngularJS 1.6.* the standard prefix is changed into '!' resulting in /#!/ for the routes
+         * You need to add following line to return to previous versions of the routing
+         */
+        $locationProvider.hashPrefix('');
     }
 })();
