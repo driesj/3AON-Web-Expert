@@ -1,0 +1,27 @@
+{
+  "name": "hoofdstuk5",
+  "version": "1.0.0",
+  "description": "Hoofdstuk 5",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "keywords": [
+    "web",
+    "expert",
+    "hoofdstuk",
+    "5"
+  ],
+  "author": "Rudy Mas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
+    "angular-sanitize": "^1.6.1",
+    "bootstrap": "^3.0",
+    "jquery": "^3.1.1",
+    "ng-slide-down": "^0.4.2"
+  }
+}
