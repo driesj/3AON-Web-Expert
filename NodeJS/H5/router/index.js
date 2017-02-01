@@ -2,6 +2,7 @@ var router = require('express').Router();
 
 router.get('/auto/:id', function (request, response) {
     var id = request.params.id;
+    response.sendFile("auto.html", {root: 'public', id: id});
 });
 
 router.get('/deleteAuto/:id', function (request, response) {
@@ -9,14 +10,11 @@ router.get('/deleteAuto/:id', function (request, response) {
 });
 
 router.get('/addAuto', function (request, response) {
-    response.redirect("addAuto.html");
+    response.sendFile("addAuto.html", {root: 'public'});
 });
 
 router.get('/partners', function (request, response) {
-    response.render('partners.html', function(err, html) {
-        response.send(html);
-    })
-//    response.redirect("partners.html");
+    response.sendFile("partners.html", {root: 'public'});
 });
 
 module.exports = router;

@@ -3,11 +3,11 @@
     angular.module('autoApp')
         .controller('autoController', autoController);
 
-    autoController.$inject = ['$routeParams', 'autoFactory'];
+    autoController.$inject = ['autoFactory'];
 
-    function autoController($routeParams, autoFactory) {
+    function autoController(autoFactory) {
         var vm = this;
-        var id = $routeParams.id;
+        var id = 1;
         autoFactory.getAuto(id)
             .then(function (response) {
                 vm.autos = response.data.data;
