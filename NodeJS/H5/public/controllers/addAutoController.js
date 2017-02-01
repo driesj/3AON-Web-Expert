@@ -3,9 +3,9 @@
     angular.module('autoApp')
         .controller('addAutoController', addAutoController);
 
-    addAutoController.$inject = ['autoFactory'];
+    addAutoController.$inject = ['autoFactory', '$location'];
 
-    function addAutoController(autoFactory) {
+    function addAutoController(autoFactory, $location) {
         var vm = this;
         autoFactory.getTypeAutos()
             .then(function (response) {
@@ -24,10 +24,10 @@
 
             autoFactory.addAuto(newAuto)
                 .then(function () {
-                    window.location = 'http://localhost:3000';
+                    $location.path('home')
                 }, function (response) {
                     alert('Er ging iets mis!\nBrowser code: ' + response.status);
-                    window.location = 'http://localhost:3000';
+                    $location.path('home')
                 });
         };
     }

@@ -11,12 +11,13 @@
     <meta name="rating" content="General">
     <meta name="revisit-after" content="7 days">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mercedes-Benz</title>
+    <title>Mercedes</title>
+    <base href="/">
     <!-- Vendor Scripts -->
-    <script src="libJS/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
-    <script src="libJS/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
-    <script src="libJS/angular/angular.min.js" type="text/javascript" defer="defer"></script>
-    <script src="libJS/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
+    <script src="/node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
+    <script src="/node_modules/angular/angular.min.js" type="text/javascript" defer="defer"></script>
+    <script src="/node_modules/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
     <!-- Personal Scripts -->
     <script src="app/app.js" type="text/javascript" defer></script>
     <script src="controllers/homeController.js" type="text/javascript" defer></script>
@@ -26,44 +27,22 @@
     <script src="controllers/footerController.js" type="text/javascript" defer></script>
     <script src="services/autoFactory.js" type="text/javascript" defer></script>
     <!-- CSS files -->
-    <link href="libJS/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
     <link href="css/autoweb.css" rel="stylesheet">
 </head>
 <body ng-app="autoApp">
-<div id="container" ng-controller="homeController as Ctrl">
+<div id="container">
     <div id="header"></div>
     <div id="middle">
-        <div id="leftmiddle">
-            <div>
-                <table width="80%">
-                    <thead>
-                    <tr>
-                        <th>&nbsp;</th>
-                        <th>Omschrijving</th>
-                        <th>Prijs</th>
-                        <th>Type</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr ng-repeat="auto in Ctrl.autos">
-                        <td><a ng-href="/deleteAuto/{{auto.id}}"><span class="glyphicon glyphicon-trash"
-                                                                      style="color: black; background-color: white; margin: 3px; padding: 5px; border-radius: 10px"></span></a>
-                        </td>
-                        <td><a ng-href="/auto/{{auto.id}}">{{auto.omschrijving}}</a></td>
-                        <td>{{auto.basisprijs | currency:"€":0}}</td>
-                        <td>{{auto.type}}</td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
+        <div id="leftmiddle" ng-view>
         </div>
     </div>
     <div id="footer">
         <table width="50%">
             <tr>
-                <th class="center"><a href="/">Home</a></th>
-                <th class="center"><a href="/addAuto">Add Car</a></th>
-                <th class="center"><a href="/partners">Mercedes Partners</a></th>
+                <th class="center"><a ng-href="home">Home</a></th>
+                <th class="center"><a ng-href="addAuto">Add Car</a></th>
+                <th class="center"><a ng-href="partners">Mercedes Partners</a></th>
             </tr>
         </table>
     </div>

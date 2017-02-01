@@ -64,8 +64,7 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
         * /oef1
         * /oef2
         * /oef3
-    * /H5: No Solution for Chapter 5!!!
-        * I don't know how I can pass parameters from the URL from NodeJS to AngularJS, and so, I can't show or delete the cars on the website.
+    * /H5: Solution Chapter 5 (Met dank aan [Frankie Claessens](https://www.facebook.com/thisisfraa) zijn tip!)
 * /Template (Contains a few starting points for new Apps)
     * /AngularJS (Templates for AngularJS 1.*)
 * package.json (Used by npm to install all dependencies)
