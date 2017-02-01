@@ -13,21 +13,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hoofdstuk 6 Oefening 1</title>
     <!-- Vendor Scripts -->
-    <script src="libJS/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
-    <script src="libJS/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
-    <script src="libJS/angular/angular.min.js" type="text/javascript" defer="defer"></script>
-    <script src="libJS/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../libJS/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../libJS/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../libJS/angular/angular.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../libJS/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
     <!-- Personal Scripts -->
-    <script src="app/app.js" type="text/javascript" defer></script>
-    <script src="controllers/homeController.js" type="text/javascript" defer></script>
-    <script src="controllers/autoController.js" type="text/javascript" defer></script>
-    <script src="controllers/deleteAutoController.js" type="text/javascript" defer></script>
-    <script src="controllers/addAutoController.js" type="text/javascript" defer></script>
-    <script src="controllers/footerController.js" type="text/javascript" defer></script>
-    <script src="services/autoFactory.js" type="text/javascript" defer></script>
+    <script src="../app/app.js" type="text/javascript" defer></script>
+    <script src="../controllers/homeController.js" type="text/javascript" defer></script>
+    <script src="../controllers/autoController.js" type="text/javascript" defer></script>
+    <script src="../controllers/deleteAutoController.js" type="text/javascript" defer></script>
+    <script src="../controllers/addAutoController.js" type="text/javascript" defer></script>
+    <script src="../controllers/footerController.js" type="text/javascript" defer></script>
+    <script src="../services/autoFactory.js" type="text/javascript" defer></script>
     <!-- CSS files -->
-    <link href="libJS/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
-    <link href="css/autoweb.css" rel="stylesheet">
+    <link href="../libJS/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/autoweb.css" rel="stylesheet">
 </head>
 <body ng-app="autoApp">
 <div id="container" ng-controller="autoController as Ctrl">
@@ -38,7 +38,7 @@
                 <table id="auto">
                     <tbody>
                     <tr>
-                        <td rowspan="5"><img src="images/{{Ctrl.autos.type}}.png"></td>
+                        <td rowspan="5"><img src="../images/{{Ctrl.autos.type}}.png"></td>
                         <td colspan="2">{{Ctrl.autos.omschrijf}}</td>
                     </tr>
                     <tr>
