@@ -25,7 +25,10 @@
         factory.deleteAuto = function (id) {
             return $http({
                 method: 'POST',
-                url: 'http://localhost/webexpert/AngularJS/H6/API/deleteAuto/'+id
+                url: 'http://localhost/webexpert/AngularJS/H6/API/deleteAuto/'+id,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                }
             })
         };
 
@@ -35,7 +38,7 @@
                 url: 'http://localhost/webexpert/AngularJS/H6/API/newAuto',
                 data: newAuto,
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/x-www-form-urlencoded',
                 }
             })
         };

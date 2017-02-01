@@ -3,18 +3,17 @@
     angular.module('autoApp')
         .controller('deleteAutoController', deleteAutoController);
 
-    deleteAutoController.$inject = ['$routeParams', 'autoFactory', '$location'];
+    deleteAutoController.$inject = ['$routeParams', 'autoFactory'];
 
-    function deleteAutoController($routeParams, autoFactory, $location) {
+    function deleteAutoController($routeParams, autoFactory) {
         var vm = this;
         var id = $routeParams.id;
         autoFactory.deleteAuto(id)
             .then(function () {
-                $location.path('home')
+                window.location = 'http://localhost:3000';
             }, function (response) {
                 alert('Er ging iets mis!\nBrowser code: ' + response.status)
-                $location.path('home')
+                window.location = 'http://localhost:3000';
             });
-
     }
 })();
