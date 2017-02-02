@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="robots" content="index,follow">
+    <meta name="keywords" content="syntheseoefening, web, expert, angularjs">
+    <meta name="description" content="Syntheseoefeningoefeningen Web Expert 2016 - AngularJS">
+    <meta name="author" content="Rudy Mas">
+    <meta name="contact" content="rudy.mas@rudymas.be">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="7 days">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Syntheseoefening AngularJS</title>
+    <base href="/webexpert/Syntheseoefening/AngularJS/">
+    <!-- Vendor Scripts -->
+    <script src="../../node_modules/jquery/dist/jquery.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/angular/angular.min.js" type="text/javascript" defer="defer"></script>
+    <script src="../../node_modules/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
+    <!-- Personal Scripts -->
+    <script src="app/app.js" type="text/javascript" defer></script>
+    <script src="controllers/autoController.js" type="text/javascript" defer></script>
+    <script src="controllers/configController.js" type="text/javascript" defer></script>
+    <script src="controllers/overzichtController.js" type="text/javascript" defer></script>
+    <script src="services/dbFactory.js" type="text/javascript" defer></script>
+    <script src="services/offerteFactory.js" type="text/javascript" defer></script>
+    <!-- CSS files -->
+    <link href="../../node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="css/global.css" rel="stylesheet">
+</head>
+<body ng-app="carConfigApp">
+<div id="container">
+    <nav>
+        <ul>
+            <li><a ng-href="auto">Auto</a></li>
+            <li><a ng-href="config">Configurator</a></li>
+            <li><a ng-href="overzicht">Overzicht offerte</a></li>
+        </ul>
+    </nav>
+    <div id="inhoud" ng-view>
+    </div>
+</div>
+</body>
+</html>

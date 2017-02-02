@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "optie": "Metaalkleur",
+    "prijs": 400
+  },
+  {
+    "id": 2,
+    "optie": "Navigatiesysteem/Radio",
+    "prijs": 1200
+  },
+  {
+    "id": 3,
+    "optie": "Sportstuur",
+    "prijs": 250
+  },
+  {
+    "id": 4,
+    "optie": "Aluminium velgen",
+    "prijs": 200
+  },
+  {
+    "id": 5,
+    "optie": "Lederen interieur",
+    "prijs": 850
+  },
+  {
+    "id": 6,
+    "optie": "Automatische versnellingsbak",
+    "prijs": 1800
+  }
+]

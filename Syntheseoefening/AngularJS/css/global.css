@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS Document */
+.right {
+    text-align: right;
+}
+.topBorder {
+    border-top: 1px solid black;
+}
+
+#container {
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+nav ul {
+    overflow: hidden;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    background-color: deepskyblue;
+    margin: 0 1px;
+    width: 30%;
+}
+
+nav a {
+    display: inline-block;
+    padding: 7px 20px 5px 20px;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+}
+
+nav a:hover {
+    text-decoration: none;
+}
+
+#auto {
+    max-width: 1000px;
+    overflow: hidden;
+    clear: both;
+    margin: 30px auto 0;
+}
+
+#auto #center {
+    text-align: center;
+}
+
+#config {
+    max-width: 1000px;
+    overflow: hidden;
+    clear: both;
+    margin: 30px auto 0;
+}
+
+#config #top {
+    text-align: center;
+}
+
+#config #top #labelAutomerk,
+#config #top #automerk,
+#config #top #labelBasis,
+#config #top #basis {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#config #top #labelAutomerk {
+}
+
+#config #top #automerk,
+#config #top #basis,
+.highlight {
+    background-color: yellow;
+    padding: 5px;
+}
+
+#config #midden,
+#config #bottom {
+    margin-left: 30%;
+}
+
+#config p,
+#overzicht #opties p{
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+#config table,
+#overzicht #opties table {
+    border-spacing: 3px;
+    border-collapse: separate;
+    min-width: 400px;
+}
+
+#config table thead tr th ,
+#overzicht #opties table thead tr th{
+    background-color: deepskyblue;
+    padding: 2px 7px;
+    color: white;
+}
+
+#config table tbody tr:nth-child(even),
+#overzicht #opties table tbody tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+#config table tbody tr:nth-child(odd),
+#overzicht #opties table tbody tr:nth-child(odd) {
+    background-color: powderblue;
+}
+
+#config table tbody tr td,
+#overzicht #opties table tbody tr td {
+    padding: 2px 7px;
+}
+
+#overzicht {
+    overflow: hidden;
+    padding-left: 15%;
+}
+
+#overzicht #merk,
+#overzicht #prijsBerekening {
+    float: left;
+}
+
+#overzicht #prijsBerekening {
+    margin-left: 20px;
+}
+
+#overzicht #prijsBerekening table tr td {
+    padding: 2px 5px;
+}
+#overzicht #opties {
+    clear: both;
+}

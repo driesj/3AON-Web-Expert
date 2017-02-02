@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "merk": "Mercedes",
+    "basisprijs": 25000
+  },
+  {
+    "id": 2,
+    "merk": "Ford",
+    "basisprijs": 18000
+  },
+  {
+    "id": 3,
+    "merk": "Opel",
+    "basisprijs": 19500
+  },
+  {
+    "id": 4,
+    "merk": "Volkswagen",
+    "basisprijs": 21000
+  }
+]

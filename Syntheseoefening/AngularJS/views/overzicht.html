@@ -1,0 +1,44 @@
+<div id="overzicht">
+    <div id="merk"><p>Gekozen automerk: <span class="highlight">{{Ctrl.automerk.merk}}</span></p></div>
+    <div id="prijsBerekening">
+        <table>
+            <tr>
+                <td class="right">Basisuitrusting:</td>
+                <td class="highlight">&euro; {{Ctrl.automerk.basisprijs}}</td>
+            </tr>
+            <tr>
+                <td class="right">Totaal opties:</td>
+                <td class="highlight">&euro; {{Ctrl.prijsopties}}</td>
+            </tr>
+            <tr class="topBorder">
+                <td class="right">Totaal, excl. BTW:</td>
+                <td class="highlight">&euro; {{Ctrl.totaalprijsExcl}}</td>
+            </tr>
+            <tr>
+                <td class="right">BTW (21%):</td>
+                <td class="highlight">&euro; {{Ctrl.BTW}}</td>
+            </tr>
+            <tr class="topBorder">
+                <td class="right">Totaal, excl. BTW:</td>
+                <td class="highlight">&euro; {{Ctrl.totaalprijsIncl}}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="opties">
+        <p>Lijst van de gekozen opties</p>
+        <table>
+            <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="gekozen in Ctrl.opties">
+                <td>{{gekozen.optie}}</td>
+                <td>&euro; {{gekozen.prijs}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

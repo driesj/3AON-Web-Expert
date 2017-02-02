@@ -1,0 +1,42 @@
+<div id="config">
+    <div id="top">
+        <div id="labelAutomerk">Gekozen automerk:</div>
+        <div id="automerk">{{Ctrl.auto.merk}}</div>
+        <div id="labelBasis">Basisuitrusting:</div>
+        <div id="basis">&euro; {{Ctrl.auto.basisprijs}}</div>
+    </div>
+    <div id="midden">
+        <p>Mogelijke opties</p>
+        <table>
+            <thead>
+            <tr>
+                <th>Optie</th>
+                <th>Prijs exclusief BTW</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="optie in Ctrl.opties">
+                <td><a ng-href="#" ng-click="Ctrl.addOptie(optie.optie, optie.prijs)">{{optie.optie}}</a></td>
+                <td class="right">&euro; {{optie.prijs}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="bottom">
+        <p>Lijst van gekozen opties:</p>
+        <table>
+            <thead>
+            <tr>
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="gekozen in Ctrl.optiesGekozen">
+                <td>{{gekozen.optie}}</td>
+                <td>&euro; {{gekozen.prijs}}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

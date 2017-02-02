@@ -1,0 +1,8 @@
+<div id="auto">
+    <div id="center">
+        <label for="automerk">Automerk</label>
+        <select id="automerk" ng-options="merk.merk for merk in Ctrl.automerken track by merk.id" ng-model="Ctrl.model"
+                ng-change="Ctrl.selectCar()">
+        </select>
+    </div>
+</div>
