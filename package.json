@@ -12,6 +12,7 @@
     "bootstrap": "^3.0",
     "express": "^4.14.1",
     "jquery": "^3.1.1",
-    "ng-slide-down": "^0.4.2"
+    "ng-slide-down": "^0.4.2",
+    "request": "^2.79.0"
   }
 }

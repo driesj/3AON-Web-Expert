@@ -64,7 +64,9 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
         * /oef1
         * /oef2
         * /oef3
-    * /H5: Solution Chapter 5 (Met dank aan [Frankie Claessens](https://www.facebook.com/thisisfraa) zijn tip!)
+    * /H5: Solution Chapter 5 (Thanks to [Frankie Claessens'](https://www.facebook.com/thisisfraa) input!)
+        * NodeJS does the communication with the PHP API
+        * AngularJS gets the information from NodeJS
 * /Template (Contains a few starting points for new Apps)
     * /AngularJS (Templates for AngularJS 1.*)
 * package.json (Used by npm to install all dependencies)
