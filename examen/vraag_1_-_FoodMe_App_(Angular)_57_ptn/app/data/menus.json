@@ -1,0 +1,80 @@
+[
+  {
+    "id": 1,
+    "type": "Afrikaans",
+    "menu": "Bunny chow",
+    "prijs": 10.00    
+  },
+  {
+    "id": 2,
+    "type": "Afrikaans",
+    "menu": "Butternutsoep",
+    "prijs": 10.00    
+  },
+  {
+    "id": 3,
+    "type": "Afrikaans",
+    "menu": "Cape Kedgeree",
+    "prijs": 17.50    
+  },
+  {
+    "id": 4,
+    "type": "Afrikaans",
+    "menu": "Chakalaka",
+    "prijs": 19.00    
+  },
+  {
+    "id": 5,
+    "type": "Afrikaans",
+    "menu": "Malvapudding",
+    "prijs": 7.00    
+  },
+  {
+    "id": 6,
+    "type": "Frans",
+    "menu": "Franse pastaschotel",
+    "prijs": 15.00    
+  },
+  {
+    "id": 7,
+    "type": "Frans",
+    "menu": "Quiche Lorraine",
+    "prijs": 16.50    
+  },
+  {
+    "id": 8,
+    "type": "Frans",
+    "menu": "Provençaalse rosbief",
+    "prijs": 15.00    
+  },
+  {
+    "id": 9,
+    "type": "Chinees",
+    "menu": "Tjap Tjoy",
+    "prijs": 13.50    
+  },
+  {
+    "id": 10,
+    "type": "Chinees",
+    "menu": "Chinese tomatensoep",
+    "prijs": 12.50    
+  },
+  {
+    "id": 11,
+    "type": "Chinees",
+    "menu": "Bami speciaal",
+    "prijs": 10.00    
+  },
+  {
+    "id": 12,
+    "type": "Italiaans",
+    "menu": "Tortilla pizza met ham",
+    "prijs": 12.00    
+  },
+  {
+    "id": 13,
+    "type": "Italiaans",
+    "menu": "Barbecue chicken pizza",
+    "prijs": 15.00   
+  }
+]

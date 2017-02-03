@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Vraag 2</title>
+    <link href="app.css" rel="stylesheet"/>
+    <link href="bootstrap.css" rel="stylesheet"/>
+    <script src="angular.js"></script>
+    <script src="angular-animate.js"></script>
+</head>
+<body ng-app="myApp">
+<div class="container" ng-controller="testController">
+    <div>
+        <p>Genereren van getallen</p>
+        <button ng-click="addNum()">Nieuw nummer</button>
+        <button ng-click="delNum()">Verwijder nummer</button>
+        <div class="view" ng-repeat="number in nums">
+            <div class="number" ng-bind="number"></div>
+        </div>
+    </div>
+</div>
+<script>
+    var app = angular.module('myApp', ['ngAnimate']);
+    app.controller('testController',
+        function ($scope) {
+            $scope.nums = [];
+
+            $scope.addNum = function () {
+                var number = 0;
+                if ($scope.nums.length > 0) {
+                    number = $scope.nums[$scope.nums.length - 1];
+                }
+                number++;
+                $scope.nums.push(number);
+            };
+
+            $scope.delNum = function () {
+                var firstNumber;
+                if ($scope.nums.length > 0) {
+                    var count = 0;
+                    for (var i = 0; i < $scope.nums.length; i++) {
+                        if (count === 0) {
+                            firstNumber = $scope.nums[i];
+                            count++;
+                        }
+                    }
+                    $scope.nums.splice($scope.nums.indexOf(firstNumber), 1);
+                }
+            };
+        });
+</script>
+</body>
+</html>

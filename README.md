@@ -69,6 +69,10 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
         * AngularJS gets the information from NodeJS
 * /Syntheseoefening
     * /AngularJS: Solution Syntheseoefening (AngularJS version)
+* **/examen: Solutions Exam**
+    * /vraag_1... (Not complete yet)
+    * /vraag_2
+    * /vraag_3
 * /Template (Contains a few starting points for new Apps)
     * /AngularJS (Templates for AngularJS 1.*)
 * package.json (Used by npm to install all dependencies)

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>All Foods</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/bootstrap-united.css">
+    <script src="angular/angular/angular.min.js" type="text/javascript" defer="defer"></script>
+    <script src="angular/angular-route/angular-route.min.js" type="text/javascript" defer="defer"></script>
+    <script src="app.js" type="text/javascript" defer="defer"></script>
+    <script src="controllers/aanmeldenController.js" type="text/javascript" defer="defer"></script>
+    <script src="controllers/restaurantsController.js" type="text/javascript" defer="defer"></script>
+    <script src="controllers/menuController.js" type="text/javascript" defer="defer"></script>
+    <script src="factories/orderFactory.js" type="text/javascript" defer="defer"></script>
+    <script src="factories/dbFactory.js" type="text/javascript" defer="defer"></script>
+</head>
+<body ng-app="foodmeApp">
+<br/><br/>
+<div class="container">
+    <div class="navbar">
+        <div class="navbar-inner">
+            <ul class="nav">
+                <li><a>All Foods</a></li>
+                <li><a ng-href="#/aanmelden">Aanmelden</a></li>
+                <li><a ng-href="#/restaurant">Restaurants</a></li>
+                <li><a ng-href="#/cart">Shopping Cart</a></li>
+                <li><a ng-href="#/about">Over ons</a></li>
+            </ul>
+        </div>
+    </div>
+    <div ng-view></div>
+</div>
+</body>
+</html>

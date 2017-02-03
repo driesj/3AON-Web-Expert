@@ -1,0 +1,54 @@
+<div class="container fm-restaurant">
+    <div class="row">
+        <div class="span2">
+            <img alt="afbeelding van het gekozen restaurant" src="img/restaurants/{{Ctrl.restaurant.id}}.PNG"
+                 class="img-rounded">
+        </div>
+        <div class="span10">
+            <h3>{{Ctrl.restaurant.naam}}</h3>
+
+            <div class="row">
+                <div class="span2">
+                    <div>{{Ctrl.restaurant.type}}</div>
+                </div>
+                <div class="span4">
+                    <div>{{Ctrl.restaurant.beschrijving}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row-fluid">
+    <div class="span4 fm-panel fm-menu-list">
+        <h4>Menu</h4>
+        <ul>
+            <li ng-repeat="menu in Ctrl.menus | filter: {type: Ctrl.restaurant.type}">
+                <a href="#/menu" ng-click="Ctrl.addToCart(menu)">
+                    <span><img alt="afbeelding vh gerecht" src="img/menus/{{menu.id}}.PNG" class="img-rounded"></span>
+                    <span>{{menu.menu}}</span>
+                    <span>&euro; {{menu.prijs}}</span>
+                    <i class="icon-plus-sign"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="span6 fm-panel fm-cart">
+        <h4>Uw bestelling</h4>
+        <form>
+            <ul class="unstyled" ng-repeat="item in Ctrl.cart">
+                <li>
+                    <a href><i class="icon-remove-sign"></i></a>
+                    <input type="number"> &times; {{item.menu}}
+                </li>
+            </ul>
+            <div class="pull-right">
+                <a href="#/checkout" class="btn">Checkout</a>
+            </div>
+            <p>
+                <b>Totaal: {{Ctrl.totaalPrijs}} Euro</b>
+            </p>
+        </form>
+    </div>
+</div>  

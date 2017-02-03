@@ -1,0 +1,44 @@
+<div class="fm-customer-bkg img-rounded">
+</div>
+
+<br/><br/><br/>
+<form class="form-horizontal" name="klantform" novalidate>
+    <div class="modal">
+        <div class="modal-header">
+            <h3>Aanmelden</h3>
+        </div>
+        <div class="modal-body">
+
+            <div class="control-group">
+                <label class="control-label" for="klantnaam">Gebruikersnaam</label>
+                <div class="controls">
+                    <input type="text" id="klantnaam" class="input-medium"
+                           required ng-model="Ctrl.klantnaam">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="leveringsadres">Leveringsadres</label>
+                <div class="controls">
+                    <input type="text" id="leveringsadres" class="input-large"
+                           required ng-model="Ctrl.leveringsadres">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label" for="Telefoon">Tel/Gsm</label>
+                <div class="controls">
+                    <input type="text" id="telefoon" class="input-medium" required ng-model="Ctrl.telefoon">
+                </div>
+            </div>
+
+            <div class="control-group">
+                <div class="controls">
+                    <input type="button" id="registreren" value="Registreren" ng-click="Ctrl.storeKlant()">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</form> 

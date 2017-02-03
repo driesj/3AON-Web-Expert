@@ -1,0 +1,37 @@
+<div class="row-fluid">
+
+    <div class="span3 fm-panel">
+        <h4>Selectie Restaurants</h4>
+
+        <form>
+            <h5>Keuken</h5>
+            <div>
+                <label class="checkbox"><input type="checkbox" checked> Afrikaans</label>
+                <label class="checkbox"><input type="checkbox"> Frans</label>
+                <label class="checkbox"><input type="checkbox"> Italiaans</label>
+                <label class="checkbox"><input type="checkbox"> Chinees</label>
+            </div>
+        </form>
+
+    </div>
+
+    <div class="span9 fm-panel">
+        <table class="table table-hover table-striped">
+            <tr>
+                <th></th>
+                <th>Naam</th>
+                <th>Beoordeling</th>
+            </tr>
+            <tr ng-repeat="restaurant in Ctrl.restaurants">
+                <td><img src="img/restaurants/{{restaurant.id}}.PNG" alt="foto restaurant"></td>
+                <td>
+                    <a ng-href="#/menu" ng-click="Ctrl.kiesRest(restaurant)"><b>{{restaurant.naam}}</b></a>
+                    <p>{{restaurant.beschrijving}}</p>
+                    <p>{{restaurant.type}}</p>
+                </td>
+                <td><img src="img/restaurants/rate_{{restaurant.rating}}.PNG" alt="rating"></td>
+            </tr>
+
+        </table>
+    </div>
+</div>
