@@ -7,9 +7,7 @@
 
     function moduleConfig($routeProvider, $locationProvider) {
         $routeProvider.when('/', {
-            templateUrl: 'views/aanmelden.html',
-            controller: 'aanmeldenController',
-            controllerAs: 'Ctrl'
+            template: ''
         })
             .when('/aanmelden', {
                 templateUrl: 'views/aanmelden.html',
@@ -31,8 +29,11 @@
                 controller: 'shoppingcartController',
                 controllerAs: 'Ctrl'
             })
+            .when('/thanks', {
+                templateUrl: 'views/bedankt.html'
+            })
             .when('/about', {
-                templateUrl: 'views/over_ons.html',
+                templateUrl: 'views/over_ons.html'
             })
             .otherwise({
                 redirectTo: '/'

@@ -3,13 +3,10 @@
     <div class="span3 fm-panel">
         <h4>Selectie Restaurants</h4>
 
-        <form>
+        <form ng-init="Ctrl.group = (Ctrl.kitchenOptions)">
             <h5>Keuken</h5>
-            <div>
-                <label class="checkbox"><input type="checkbox" checked> Afrikaans</label>
-                <label class="checkbox"><input type="checkbox"> Frans</label>
-                <label class="checkbox"><input type="checkbox"> Italiaans</label>
-                <label class="checkbox"><input type="checkbox"> Chinees</label>
+            <div ng-repeat="check in Ctrl.group">
+                <label class="checkbox"><input type="checkbox" ng-model="Ctrl.useChoices[$index]"> {{check.kitchen}}</label>
             </div>
         </form>
 
@@ -22,7 +19,7 @@
                 <th>Naam</th>
                 <th>Beoordeling</th>
             </tr>
-            <tr ng-repeat="restaurant in Ctrl.restaurants">
+            <tr ng-repeat="restaurant in Ctrl.restaurants | filter:Ctrl.filterKitchen()">
                 <td><img src="img/restaurants/{{restaurant.id}}.PNG" alt="foto restaurant"></td>
                 <td>
                     <a ng-href="#/menu" ng-click="Ctrl.kiesRest(restaurant)"><b>{{restaurant.naam}}</b></a>

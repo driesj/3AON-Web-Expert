@@ -15,6 +15,23 @@
 
         vm.kiesRest = function (data) {
             orderFactory.addRestaurant(data);
+        };
+
+        vm.useChoices = [];
+        vm.kitchenOptions = [
+            {"kitchen": "Afrikaans"},
+            {"kitchen": "Frans"},
+            {"kitchen": "Italiaans"},
+            {"kitchen": "Chinees"}
+        ];
+        vm.filterKitchen = function () {
+            return function (option) {
+                for (var i in vm.useChoices) {
+                    if (vm.useChoices[i] && option.type == vm.group[i].kitchen) {
+                        return true;
+                    }
+                }
+            }
         }
     }
 })();
