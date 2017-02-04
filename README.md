@@ -22,8 +22,7 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
 
 ## Documentation
 
-* /AngularJS
-    * /H2: Solutions Chapter 2
+* /AngularJS    * /H2: Solutions Chapter 2
         * /css (CSS used)
         * /img (Photos used)
         * foto_tonen.html
@@ -70,7 +69,7 @@ You can use http://localhost/webexpert to browse and open the solutions in the b
 * /Syntheseoefening
     * /AngularJS: Solution Syntheseoefening (AngularJS version)
 * **/examen: Solutions Exam**
-    * /vraag_1... (Not complete yet)
+    * /vraag_1
     * /vraag_2
     * /vraag_3
 * /Template (Contains a few starting points for new Apps)
