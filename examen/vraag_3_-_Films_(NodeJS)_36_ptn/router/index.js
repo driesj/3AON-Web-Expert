@@ -14,11 +14,12 @@ router.post('/api/addfilm', function (request, response) {
         }
     });
 
-    var newFilm = {};
-    newFilm.id = lastId + 1;
-    newFilm.titel = request.body.titel;
-    newFilm.auteur = request.body.auteur;
-    newFilm.jaar = request.body.jaar;
+    var newFilm = {
+        "id": lastId + 1,
+        "titel": request.body.titel,
+        "auteur": request.body.auteur,
+        "jaar": request.body.jaar
+    };
     films.push(newFilm);
     response.json(films);
 });

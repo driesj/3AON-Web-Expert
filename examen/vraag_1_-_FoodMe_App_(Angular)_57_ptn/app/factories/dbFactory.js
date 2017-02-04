@@ -1,4 +1,4 @@
-(function() {
+(function () {
     'use strict';
     angular.module('foodmeApp')
         .factory('dbFactory', dbFactory);
@@ -18,4 +18,4 @@
 
         return factory;
     }
-}) ();
+})();

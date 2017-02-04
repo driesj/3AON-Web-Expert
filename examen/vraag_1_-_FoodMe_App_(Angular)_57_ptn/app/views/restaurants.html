@@ -6,7 +6,8 @@
         <form ng-init="Ctrl.group = (Ctrl.kitchenOptions)">
             <h5>Keuken</h5>
             <div ng-repeat="check in Ctrl.group">
-                <label class="checkbox"><input type="checkbox" ng-model="Ctrl.useChoices[$index]"> {{check.kitchen}}</label>
+                <label class="checkbox"><input type="checkbox" ng-model="Ctrl.useChoices[$index]">
+                    {{check.kitchen}}</label>
             </div>
         </form>
 

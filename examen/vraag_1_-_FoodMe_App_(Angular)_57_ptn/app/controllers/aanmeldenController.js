@@ -8,7 +8,7 @@
     function aanmeldenController(orderFactory) {
         var vm = this;
 
-        vm.storeKlant = function() {
+        vm.storeKlant = function () {
             var klantgegevens = {
                 klantnaam: vm.klantnaam,
                 leveringsadres: vm.leveringsadres,

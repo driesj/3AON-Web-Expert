@@ -3,80 +3,80 @@
     "id": 1,
     "naam": "Toukoul",
     "beschrijving": "Trendy restaurant met bijzonder lekker eten. Ideaal voor met vrienden",
-	"keuken": "Afrikaanse keuken",
-	"type": "Afrikaans",
-    "rating": 2    
+    "keuken": "Afrikaanse keuken",
+    "type": "Afrikaans",
+    "rating": 2
   },
   {
     "id": 2,
     "naam": "Le verseau",
     "beschrijving": "Un bon cocktail",
-	"keuken": "Afrikaanse keuken",
-	"type": "Afrikaans",
-    "rating": 4    
+    "keuken": "Afrikaanse keuken",
+    "type": "Afrikaans",
+    "rating": 4
   },
   {
     "id": 3,
     "naam": "Le p'tit chouia en +",
     "beschrijving": "Uitstekend Afrikaans restaurant. Prima eten in gezelligheid",
-	"keuken": "Afrikaanse keuken",
-	"type": "Afrikaans",
-    "rating": 5    
+    "keuken": "Afrikaanse keuken",
+    "type": "Afrikaans",
+    "rating": 5
   },
   {
     "id": 4,
     "naam": "Comme Chez Soi",
     "beschrijving": "Top. Heerlijk romantisch eten",
-	"keuken": "Franse keuken",
-	"type": "Frans",
-    "rating": 2    
+    "keuken": "Franse keuken",
+    "type": "Frans",
+    "rating": 2
   },
   {
     "id": 5,
     "naam": "Le Bistro",
     "beschrijving": "Gezellige bistro. Heerlijke ambiance",
-	"keuken": "Franse keuken",
-	"type": "Frans",
-    "rating": 4    
+    "keuken": "Franse keuken",
+    "type": "Frans",
+    "rating": 4
   },
   {
     "id": 6,
     "naam": "Pasta Divina",
     "beschrijving": "Gemoedelijke ontvangst. Echt Italiaans",
-	"keuken": "Italiaanse keuken",
-	"type": "Italiaans",
-    "rating": 4    
+    "keuken": "Italiaanse keuken",
+    "type": "Italiaans",
+    "rating": 4
   },
   {
     "id": 7,
     "naam": "Dolce Amaro",
     "beschrijving": "Pure en lekkere Italiaanse keuken",
-	"keuken": "Italiaanse keuken",
-	"type": "Italiaans",
-    "rating": 2    
+    "keuken": "Italiaanse keuken",
+    "type": "Italiaans",
+    "rating": 2
   },
   {
     "id": 8,
     "naam": "Beijingya",
     "beschrijving": "Zalig. Uitstekende eend-bereidingen",
-	"keuken": "Chinese keuken",
-	"type": "Chinees",
-    "rating": 2    
+    "keuken": "Chinese keuken",
+    "type": "Chinees",
+    "rating": 2
   },
   {
     "id": 9,
     "naam": "Hong Kong Delight",
     "beschrijving": "Authentiek. Lekkere peking duck",
-	"keuken": "Chinese keuken",
-	"type": "Chinees",
-    "rating": 2    
+    "keuken": "Chinese keuken",
+    "type": "Chinees",
+    "rating": 2
   },
   {
     "id": 10,
     "naam": "Nam Shan",
     "beschrijving": "Sympathiek chinees restaurant …",
-	"keuken": "Chinese keuken",	
-	"type": "Chinees",
-    "rating": 2  
+    "keuken": "Chinese keuken",
+    "type": "Chinees",
+    "rating": 2
   }
 ]

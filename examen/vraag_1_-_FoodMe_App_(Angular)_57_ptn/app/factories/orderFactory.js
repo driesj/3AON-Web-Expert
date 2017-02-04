@@ -10,7 +10,6 @@
         var klantInfo = {"klantnaam": "Onbekend", "leveringsadres": "Onbekend", "telefoon": "Onbekend"};
         var restaurant = {};
         var cart = [];
-        var totaalPrijs = 0
 
         factory.addKlantInfo = function (invoer) {
             klantInfo = {
@@ -18,8 +17,11 @@
                 "leveringsadres": invoer.leveringsadres,
                 "telefoon": invoer.telefoon
             };
-            console.log(klantInfo);
             $location.path('restaurant');
+        };
+
+        factory.getKlantInfo = function () {
+            return klantInfo;
         };
 
         factory.addRestaurant = function (invoer) {
@@ -33,21 +35,53 @@
             }
         };
 
-        factory.addToCart = function (invoer) {
-            cart.push(invoer);
-            totaalPrijs += invoer.prijs;
-        };
-
         factory.getRestaurant = function () {
             return restaurant;
+        };
+
+        factory.addToCart = function (invoer) {
+            var index = cart.indexOf(invoer);
+            if (index == -1) {
+                invoer.aantal = 1;
+                cart.push(invoer);
+            } else {
+                cart[index].aantal++;
+            }
+        };
+
+        factory.deleteFromCart = function (invoer) {
+            var index = cart.indexOf(invoer);
+            if (index != -1) {
+                cart.splice(index, 1);
+            }
+        };
+
+        factory.emptyCart = function () {
+            cart = [];
         };
 
         factory.getCart = function () {
             return cart;
         };
 
-        factory.getTotaalPrijs = function () {
-            return totaalPrijs;
+        factory.setCart = function (invoer) {
+            cart = invoer;
+        };
+
+        factory.calcTotaalprijs = function () {
+            var totaalprijs = 0;
+            for (var i = 0; i < cart.length; i++) {
+                totaalprijs += cart[i].aantal * cart[i].prijs;
+            }
+            return totaalprijs;
+        };
+
+        factory.createOrder = function () {
+            var orderID = Math.round(Math.random() * 1000 + 1);
+
+            // Hier komt dan de code om de bestelling op te slaan in de Database
+
+            return orderID;
         };
 
         return factory;

@@ -18,12 +18,18 @@
         vm.totaalPrijs = 0;
 
         vm.addToCart = function (invoer) {
-            var order = {
-                menu: invoer.menu,
-                prijs: invoer.prijs
-            };
-            orderFactory.addToCart(order);
-            vm.totaalPrijs = orderFactory.getTotaalPrijs();
-        }
+            orderFactory.addToCart(invoer);
+            vm.totaalPrijs = orderFactory.calcTotaalprijs();
+        };
+
+        vm.deleteFromCart = function (invoer) {
+            orderFactory.deleteFromCart(invoer);
+            vm.totaalPrijs = orderFactory.calcTotaalprijs();
+        };
+
+        vm.updateCart = function () {
+            orderFactory.setCart(vm.cart);
+            vm.totaalPrijs = orderFactory.calcTotaalprijs();
+        };
     }
 })();

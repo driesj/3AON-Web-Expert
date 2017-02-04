@@ -39,12 +39,12 @@
         <form>
             <ul class="unstyled" ng-repeat="item in Ctrl.cart">
                 <li>
-                    <a href><i class="icon-remove-sign"></i></a>
-                    <input type="number"> &times; {{item.menu}}
+                    <a href="#/menu" ng-click="Ctrl.deleteFromCart(item)"><i class="icon-remove-sign"></i></a>
+                    <input type="number" ng-model="item.aantal" ng-change="Ctrl.updateCart()"> &times; {{item.menu}}
                 </li>
             </ul>
             <div class="pull-right">
-                <a href="#/checkout" class="btn">Checkout</a>
+                <a href="#/cart" class="btn">Checkout</a>
             </div>
             <p>
                 <b>Totaal: {{Ctrl.totaalPrijs}} Euro</b>

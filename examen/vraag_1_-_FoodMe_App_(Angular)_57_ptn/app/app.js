@@ -30,7 +30,9 @@
                 controllerAs: 'Ctrl'
             })
             .when('/thanks', {
-                templateUrl: 'views/bedankt.html'
+                templateUrl: 'views/bedankt.html',
+                controller: 'bedanktController',
+                controllerAs: 'Ctrl'
             })
             .when('/about', {
                 templateUrl: 'views/over_ons.html'

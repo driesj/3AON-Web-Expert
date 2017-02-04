@@ -17,7 +17,7 @@
             orderFactory.addRestaurant(data);
         };
 
-        vm.useChoices = [];
+        vm.useChoices = [true, true, true, true];
         vm.kitchenOptions = [
             {"kitchen": "Afrikaans"},
             {"kitchen": "Frans"},
@@ -26,7 +26,7 @@
         ];
         vm.filterKitchen = function () {
             return function (option) {
-                for (var i in vm.useChoices) {
+                for (var i = 0; i < vm.useChoices.length; i++) {
                     if (vm.useChoices[i] && option.type == vm.group[i].kitchen) {
                         return true;
                     }
